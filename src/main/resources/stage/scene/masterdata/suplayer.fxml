@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+            xmlns="http://javafx.com/javafx/8.0.40" fx:controller="dallastools.actions.masterdata.SuplayerAction">
+    <right>
+        <ScrollPane hbarPolicy="NEVER" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+            <content>
+                <GridPane hgap="10.0" vgap="10.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="60.0" prefWidth="60.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="60.0" prefWidth="60.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="60.0" prefWidth="60.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </padding>
+                    <children>
+                        <Text layoutX="30.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.address.nl" GridPane.rowIndex="10">
+                            <GridPane.margin>
+                                <Insets left="10.0"/>
+                            </GridPane.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%scene.suplayer"
+                              GridPane.columnSpan="2147483647">
+                            <font>
+                                <Font name="System Bold" size="20.0"/>
+                            </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%java.model.suplayer.name"
+                              GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="10.0"/>
+                            </GridPane.margin>
+                        </Text>
+                        <Text layoutX="30.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.suplayer.phone" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets left="10.0"/>
+                            </GridPane.margin>
+                        </Text>
+                        <Text layoutX="30.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.address.street.address" GridPane.rowIndex="4">
+                            <GridPane.margin>
+                                <Insets left="10.0"/>
+                            </GridPane.margin>
+                        </Text>
+                        <Text layoutX="30.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.address.city" GridPane.rowIndex="6">
+                            <GridPane.margin>
+                                <Insets left="10.0"/>
+                            </GridPane.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%java.model.address.district"
+                              GridPane.rowIndex="7">
+                            <GridPane.margin>
+                                <Insets left="10.0"/>
+                            </GridPane.margin>
+                        </Text>
+                        <Text layoutX="30.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.address.na" GridPane.rowIndex="9">
+                            <GridPane.margin>
+                                <Insets left="10.0"/>
+                            </GridPane.margin>
+                        </Text>
+                        <Text layoutX="30.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.address.pin.code" GridPane.rowIndex="8">
+                            <GridPane.margin>
+                                <Insets left="10.0"/>
+                            </GridPane.margin>
+                        </Text>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                                    GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                            <children>
+                                <TextField fx:id="txtName" editable="false" focusTraversable="false" layoutX="-49.0"
+                                           layoutY="1.0" opacity="0.9" prefHeight="30.0" prefWidth="200.0"
+                                           promptText="%scene.suplayer.placeholder.name" AnchorPane.bottomAnchor="0.0"
+                                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                           AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="140.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0"
+                                    GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+                            <children>
+                                <TextField fx:id="txtPhone" editable="false" focusTraversable="false" layoutX="-49.0"
+                                           layoutY="1.0" opacity="0.9" prefHeight="30.0" prefWidth="200.0"
+                                           promptText="%scene.suplayer.placeholder.phone" AnchorPane.bottomAnchor="0.0"
+                                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                           AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                                    GridPane.columnSpan="2147483647" GridPane.rowIndex="4" GridPane.rowSpan="2">
+                            <children>
+                                <TextArea fx:id="txtStreetAddress" editable="false" focusTraversable="false"
+                                          layoutX="-57.0" layoutY="-78.0" opacity="0.9" prefHeight="122.0"
+                                          prefWidth="200.0" promptText="%java.model.address.street.address"
+                                          AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="140.0" layoutY="140.0" prefHeight="200.0" prefWidth="200.0"
+                                    GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="6">
+                            <children>
+                                <TextField fx:id="txtCity" editable="false" focusTraversable="false" layoutX="-49.0"
+                                           layoutY="1.0" opacity="0.9" prefHeight="30.0" prefWidth="200.0"
+                                           promptText="%java.model.address.city" AnchorPane.bottomAnchor="0.0"
+                                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                           AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="140.0" layoutY="300.0" prefHeight="200.0" prefWidth="200.0"
+                                    GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="7">
+                            <children>
+                                <TextField fx:id="txtDistrict" editable="false" focusTraversable="false" layoutX="-49.0"
+                                           layoutY="1.0" opacity="0.9" prefHeight="30.0" prefWidth="200.0"
+                                           promptText="%java.model.address.district" AnchorPane.bottomAnchor="0.0"
+                                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                           AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="140.0" layoutY="340.0" prefHeight="200.0" prefWidth="200.0"
+                                    GridPane.columnIndex="3" GridPane.rowIndex="10">
+                            <children>
+                                <TextField fx:id="txtRt" alignment="CENTER" editable="false" focusTraversable="false"
+                                           layoutX="-49.0" layoutY="1.0" opacity="0.9" prefHeight="30.0"
+                                           prefWidth="200.0" promptText="%java.model.address.nl"
+                                           AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                           AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="140.0" layoutY="380.0" prefHeight="200.0" prefWidth="200.0"
+                                    GridPane.columnIndex="3" GridPane.rowIndex="9">
+                            <children>
+                                <TextField fx:id="txtRw" alignment="CENTER" editable="false" focusTraversable="false"
+                                           layoutX="-49.0" layoutY="1.0" opacity="0.9" prefHeight="30.0"
+                                           prefWidth="200.0" promptText="%java.model.address.na"
+                                           AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                           AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="210.0" layoutY="380.0" prefHeight="200.0" prefWidth="200.0"
+                                    GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="8">
+                            <children>
+                                <TextField fx:id="txtPos" alignment="CENTER_RIGHT" editable="false"
+                                           focusTraversable="false" layoutX="-49.0" layoutY="1.0" opacity="0.9"
+                                           prefHeight="30.0" prefWidth="130.0" promptText="%java.model.address.pin.code"
+                                           AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                           AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </GridPane>
+            </content>
+        </ScrollPane>
+    </right>
+    <center>
+        <AnchorPane BorderPane.alignment="CENTER">
+            <children>
+                <TableView fx:id="tableView" layoutX="94.0" layoutY="59.0" prefHeight="358.0" prefWidth="400.0"
+                           AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                           AnchorPane.topAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="columnId" editable="false" maxWidth="100.0" minWidth="100.0"
+                                     prefWidth="100.0" sortable="false" text="%java.model.suplayer.id">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="KEY" size="14"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="columnContact" editable="false" maxWidth="150.0" minWidth="150.0"
+                                     prefWidth="150.0" text="%java.model.suplayer.phone">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="PHONE" size="14"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="columnName" editable="false" maxWidth="1.7976931348623157E308"
+                                     minWidth="150.0" prefWidth="150.0" text="%java.model.suplayer.name">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="ARCHIVE" size="14"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="columnAction" editable="false" maxWidth="170.0" minWidth="170.0"
+                                     prefWidth="170.0" sortable="false" text="%javafx.action.do">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="TASKS" size="14"/>
+                            </graphic>
+                        </TableColumn>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                    <contextMenu>
+                        <ContextMenu>
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#loadData" text="%javafx.action.refresh">
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="F5" control="DOWN" meta="UP" shift="UP"
+                                                            shortcut="UP"/>
+                                    </accelerator>
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="REFRESH" size="18"/>
+                                    </graphic>
+                                </MenuItem>
+                                <MenuItem mnemonicParsing="false" onAction="#tableViewClearSelection"
+                                          text="%javafx.action.clear.selection">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="SQUARE_ALT" size="18"/>
+                                    </graphic>
+                                </MenuItem>
+                            </items>
+                        </ContextMenu>
+                    </contextMenu>
+                </TableView>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+        </AnchorPane>
+    </center>
+    <bottom>
+        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <Button defaultButton="true" mnemonicParsing="false" onAction="#newSuplayer" prefHeight="35.0"
+                        prefWidth="120.0" text="%javafx.action.new">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="PLUS" size="18"/>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="%scene.suplayer.tooltips.new"/>
+                    </tooltip>
+                </Button>
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#loadData" prefHeight="35.0"
+                        prefWidth="120.0" text="%javafx.action.refresh">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="REFRESH" size="18"/>
+                    </graphic>
+                </Button>
+            </items>
+        </ToolBar>
+    </bottom>
+    <top>
+        <HBox spacing="10.0">
+            <children>
+                <FontAwesomeIconView glyphName="PAPER_PLANE_ALT" size="28"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%scene.home.menu.master.suplayer" underline="true">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Text>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+        </HBox>
+    </top>
+</BorderPane>

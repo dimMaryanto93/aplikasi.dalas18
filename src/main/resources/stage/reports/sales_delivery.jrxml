@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
+<!-- 2015-12-26T20:56:38 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sales_delivery" pageWidth="425" pageHeight="283" orientation="Landscape" columnWidth="385" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="296b88f5-a000-4be2-b471-5d00dd8f02e6">
+	<property name="com.jaspersoft.studio.unit." value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="cm"/>
+	<import value="dallastools.models.*"/>
+	<parameter name="trans_id" class="java.lang.String"/>
+	<parameter name="employee" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="wightPerKg" class="java.lang.Integer">
+		<fieldDescription><![CDATA[wightPerKg]]></fieldDescription>
+	</field>
+	<field name="sales_id" class="java.lang.String">
+		<fieldDescription><![CDATA[sales.transId]]></fieldDescription>
+	</field>
+	<field name="sales_date" class="java.sql.Date">
+		<fieldDescription><![CDATA[sales.dateTransaction]]></fieldDescription>
+	</field>
+	<field name="sales_shipto" class="java.lang.String">
+		<fieldDescription><![CDATA[sales.shipTo]]></fieldDescription>
+	</field>
+	<field name="sales_paid" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[sales.paid]]></fieldDescription>
+	</field>
+	<pageHeader>
+		<band height="63">
+			<textField pattern="dd MMM yyyy, HH:mm a">
+				<reportElement x="300" y="53" width="80" height="10" uuid="3b3c87ef-eb05-4831-bca3-d42d3afffa46"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="250" y="53" width="50" height="10" uuid="bce42114-aa07-46e9-b2ec-8ff5509dd2a6"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Waktu Cetak :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="210" y="0" width="170" height="20" uuid="0d883f4f-16fa-41a1-b75c-db3c1a9909d7"/>
+				<box padding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{trans_id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="210" y="21" width="30" height="13" uuid="74f6672a-7c72-4391-8036-cdec732233e7"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Supir:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="240" y="20" width="140" height="14" uuid="cdd96d2d-f84e-4b7b-9546-a0a7d4e0747d"/>
+				<box padding="3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{employee}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="210" y="20" width="170" height="1" uuid="301619ca-9762-444e-828b-0a9a0940dc53"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="17" uuid="b89d83fb-e729-4e87-a933-1498ffd2b633">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dallas Ice Cream]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="17" width="92" height="8" uuid="e3e401d2-0f3d-44cf-9c42-c4497d825171">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement verticalAlignment="Bottom">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[jl.cendana no.12 Lembang]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="25" width="100" height="1" uuid="14082b4a-5593-4d7c-82fb-5dcbeedcc0c2"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="26" width="100" height="14" uuid="b96b43dd-ec20-4c33-811e-7634392a1060"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SALES DELIVERY]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="149" height="30" uuid="2db8a3c6-fc29-42d9-8e46-388e5ca8453e"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Transaksi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="0" width="38" height="30" uuid="bcb94f11-afcd-4814-8cb3-92f1c9744e74"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Berat/Kg]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="0" width="153" height="30" uuid="8452515f-d16e-41a9-b836-d22929ed413b"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="0" width="40" height="30" uuid="08f3a907-1029-4c57-b0db-3b5d0681175b"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Paraf]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="149" height="20" uuid="5422fa21-58de-4dcb-b277-25ca902d8531"/>
+				<box padding="5">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sales_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="0" width="38" height="20" uuid="ecbdc32d-8fb1-407a-9de0-080fc4c8891e"/>
+				<box padding="5">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{wightPerKg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="187" y="0" width="153" height="20" uuid="a452ce1f-67e6-47d3-a762-4118d9531d7b"/>
+				<box padding="5">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sales_shipto}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="340" y="0" width="40" height="20" uuid="a61ea6c0-928e-4f29-8e34-201f7d2788e9"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

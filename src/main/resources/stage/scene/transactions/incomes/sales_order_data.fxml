@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+            xmlns="http://javafx.com/javafx/8.0.40" fx:controller="dallastools.actions.income.SalesOrderDataAction">
+    <center>
+        <ScrollPane fitToHeight="true" fitToWidth="true" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+            <content>
+                <GridPane hgap="10.0" vgap="10.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="120.0" prefWidth="120.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="120.0" prefWidth="120.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="30.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="175.0" prefWidth="175.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="200.0" prefHeight="200.0"
+                                        vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </padding>
+                    <children>
+                        <Text layoutX="20.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.sales.order.date"/>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%java.model.sales.order.customer"
+                              GridPane.rowIndex="1"/>
+                        <Text layoutX="541.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%scene.sales.order.placeholder.granttotal" GridPane.columnIndex="6"
+                              GridPane.rowIndex="5"/>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%scene.sales.order.placeholder.total"
+                              GridPane.columnIndex="6" GridPane.rowIndex="3"/>
+                        <Text layoutX="557.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%scene.sales.order.placeholder.dp" GridPane.columnIndex="6" GridPane.rowIndex="4"/>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                                    GridPane.columnSpan="2">
+                            <children>
+                                <DatePicker fx:id="txtOrderDate" editable="false" layoutX="1.0" opacity="0.9"
+                                            prefHeight="30.0" prefWidth="200.0"
+                                            promptText="%scene.sales.order.placeholder.date" showWeekNumbers="true"
+                                            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                                    GridPane.columnSpan="3" GridPane.rowIndex="1">
+                            <children>
+                                <ComboBox fx:id="txtCostomer" layoutX="14.0" layoutY="1.0" opacity="0.9"
+                                          prefHeight="30.0" prefWidth="164.0"
+                                          promptText="%scene.sales.order.placeholder.customer"
+                                          AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                            <children>
+                                <Button fx:id="btnAddCustomer" focusTraversable="false" layoutX="24.0" layoutY="3.0"
+                                        mnemonicParsing="false" onAction="#doAddCustomer" opacity="0.9"
+                                        prefHeight="30.0" prefWidth="100.0" text="%javafx.action.new"
+                                        AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                        AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="PLUS" size="14"/>
+                                    </graphic>
+                                    <tooltip>
+                                        <Tooltip text="%scene.sales.order.tooltips.new.customer"/>
+                                    </tooltip>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                            <children>
+                                <Button fx:id="btnAddItem" layoutX="6.0" layoutY="2.0" mnemonicParsing="false"
+                                        onAction="#doAddItem" opacity="0.9" prefHeight="30.0" prefWidth="100.0"
+                                        text="%javafx.action.add" AnchorPane.bottomAnchor="0.0"
+                                        AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                        AnchorPane.topAnchor="0.0">
+                                    <tooltip>
+                                        <Tooltip text="%scene.sales.order.tooltips.add.item"/>
+                                    </tooltip>
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="PLUS" size="18"/>
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="250.0" prefWidth="200.0" GridPane.columnSpan="2147483647"
+                                    GridPane.rowIndex="2">
+                            <children>
+                                <TableView fx:id="tableView" layoutX="151.0" layoutY="-12.0" opacity="0.9"
+                                           prefHeight="300.0" prefWidth="780.0" AnchorPane.bottomAnchor="0.0"
+                                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                           AnchorPane.topAnchor="0.0">
+                                    <columns>
+                                        <TableColumn fx:id="columnAction" editable="false" maxWidth="170.0"
+                                                     minWidth="170.0" prefWidth="170.0" sortable="false"
+                                                     text="%javafx.action.do">
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="TASKS" size="14"/>
+                                            </graphic>
+                                        </TableColumn>
+                                        <TableColumn editable="false" prefWidth="75.0" sortable="false"
+                                                     text="%scene.item">
+                                            <columns>
+                                                <TableColumn fx:id="columnItemId" editable="false" maxWidth="150.0"
+                                                             minWidth="150.0" prefWidth="150.0" sortable="false"
+                                                             text="%scene.item.placeholder.id">
+                                                    <graphic>
+                                                        <FontAwesomeIconView glyphName="KEY" size="14"/>
+                                                    </graphic>
+                                                </TableColumn>
+                                                <TableColumn fx:id="columnProductName" editable="false"
+                                                             maxWidth="1.7976931348623157E308" minWidth="180.0"
+                                                             prefWidth="180.0" sortable="false"
+                                                             text="%scene.item.placeholder.name">
+                                                    <graphic>
+                                                        <FontAwesomeIconView glyphName="ARCHIVE" size="14"/>
+                                                    </graphic>
+                                                </TableColumn>
+                                                <TableColumn fx:id="columnItemUnit" editable="false" maxWidth="75.0"
+                                                             minWidth="75.0" prefWidth="75.0" sortable="false"
+                                                             text="%java.model.item.unit">
+                                                    <graphic>
+                                                        <FontAwesomeIconView glyphName="COMPRESS" size="14"/>
+                                                    </graphic>
+                                                </TableColumn>
+                                                <TableColumn fx:id="columnPrice" editable="false" maxWidth="120.0"
+                                                             minWidth="120.0" prefWidth="120.0" sortable="false"
+                                                             text="%java.model.item.price.sell">
+                                                    <graphic>
+                                                        <FontAwesomeIconView glyphName="DOLLAR" size="18"/>
+                                                    </graphic>
+                                                </TableColumn>
+                                            </columns>
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="ARCHIVE" size="14"/>
+                                            </graphic>
+                                        </TableColumn>
+                                        <TableColumn fx:id="columnQty" editable="false" maxWidth="75.0" minWidth="75.0"
+                                                     prefWidth="75.0" sortable="false" text="%java.model.item.qty">
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="BELL" size="18"/>
+                                            </graphic>
+                                        </TableColumn>
+                                        <TableColumn fx:id="columnSubtotal" editable="false" maxWidth="150.0"
+                                                     minWidth="150.0" prefWidth="150.0" sortable="false"
+                                                     text="%scene.sales.order.placeholder.subtotal">
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="DOLLAR" size="18"/>
+                                            </graphic>
+                                        </TableColumn>
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                                    </columnResizePolicy>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                            <children>
+                                <TextField fx:id="txtTotal" alignment="CENTER_RIGHT" editable="false"
+                                           focusTraversable="false" layoutY="14.0" opacity="0.9" prefHeight="40.0"
+                                           prefWidth="171.0" promptText="Rp.0" AnchorPane.bottomAnchor="0.0"
+                                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                           AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="4">
+                            <children>
+                                <Spinner fx:id="txtDownPayment" layoutX="-21.0" layoutY="1.0" opacity="0.9"
+                                         prefHeight="30.0" prefWidth="150.0" AnchorPane.bottomAnchor="0.0"
+                                         AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                         AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="625.0" layoutY="348.0" prefHeight="200.0" prefWidth="200.0"
+                                    GridPane.columnIndex="7" GridPane.rowIndex="5">
+                            <children>
+                                <TextField fx:id="txtGrantTotal" alignment="CENTER_RIGHT" editable="false"
+                                           focusTraversable="false" layoutY="14.0" opacity="0.9" prefHeight="40.0"
+                                           prefWidth="171.0" promptText="Rp.0" AnchorPane.bottomAnchor="0.0"
+                                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                           AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+                            <children>
+                                <Button cancelButton="true" layoutX="-15.0" layoutY="1.0" mnemonicParsing="false"
+                                        onAction="#doClose" opacity="0.9" prefHeight="31.0" prefWidth="100.0"
+                                        text="%javafx.action.cancel" AnchorPane.bottomAnchor="0.0"
+                                        AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                        AnchorPane.topAnchor="0.0">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="EJECT" size="18"/>
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                            <children>
+                                <Button fx:id="btnAction" defaultButton="true" disable="true" layoutX="-8.0"
+                                        layoutY="-5.0" mnemonicParsing="false" onAction="#doSave" opacity="0.9"
+                                        prefHeight="30.0" prefWidth="100.0" text="%javafx.action.save"
+                                        AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                        AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="SAVE" size="18"/>
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </GridPane>
+            </content>
+        </ScrollPane>
+    </center>
+    <top>
+        <HBox spacing="5.0">
+            <children>
+                <FontAwesomeIconView glyphName="INBOX" size="28"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%scene.home.menu.income.sales.order.an-order"
+                      underline="true">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Text>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+        </HBox>
+    </top>
+</BorderPane>

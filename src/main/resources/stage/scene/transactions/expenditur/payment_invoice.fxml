@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+            xmlns="http://javafx.com/javafx/8.0.40" fx:controller="dallastools.actions.expeditur.PaymentInvoiceAction">
+    <center>
+        <AnchorPane BorderPane.alignment="CENTER">
+            <children>
+                <TableView fx:id="tableView" layoutX="92.0" layoutY="79.0" prefHeight="499.0" prefWidth="784.0"
+                           AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                           AnchorPane.topAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="columnId" editable="false" maxWidth="100.0" minWidth="100.0"
+                                     prefWidth="100.0" sortable="false" text="%java.model.payment.id">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="KEY" size="14"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="columnDate" maxWidth="120.0" minWidth="120.0" prefWidth="120.0"
+                                     text="%java.model.payment.date">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="CALENDAR" size="14"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="columnCategory" editable="false" maxWidth="200.0" minWidth="200.0"
+                                     prefWidth="200.0" text="%java.model.payment.category">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="COMPRESS" size="14"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="columnAction" editable="false" maxWidth="170.0" minWidth="170.0"
+                                     prefWidth="170.0" sortable="false" text="%javafx.action.do">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="TASKS" size="14"/>
+                            </graphic>
+                        </TableColumn>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                    <contextMenu>
+                        <ContextMenu>
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#loadData" text="%javafx.action.refresh">
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="F5" control="DOWN" meta="UP" shift="UP"
+                                                            shortcut="UP"/>
+                                    </accelerator>
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="REFRESH" size="18"/>
+                                    </graphic>
+                                </MenuItem>
+                                <MenuItem mnemonicParsing="false" onAction="#tableViewClearSelection"
+                                          text="%javafx.action.clear.selection">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="SQUARE_ALT" size="18"/>
+                                    </graphic>
+                                </MenuItem>
+                            </items>
+                        </ContextMenu>
+                    </contextMenu>
+                </TableView>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+        </AnchorPane>
+    </center>
+    <bottom>
+        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <Button defaultButton="true" mnemonicParsing="false" onAction="#newPayment" prefHeight="35.0"
+                        prefWidth="120.0" text="%javafx.action.new">
+                    <tooltip>
+                        <Tooltip text="%scene.payment.tooltips.new"/>
+                    </tooltip>
+                    <graphic>
+                        <FontAwesomeIconView glyphName="PLUS" size="18"/>
+                    </graphic>
+                </Button>
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#loadData" prefHeight="35.0"
+                        prefWidth="120.0" text="%javafx.action.refresh">
+                    <tooltip>
+                        <Tooltip text="Empty Tooltip"/>
+                    </tooltip>
+                    <graphic>
+                        <FontAwesomeIconView glyphName="REFRESH" size="18"/>
+                    </graphic>
+                </Button>
+            </items>
+        </ToolBar>
+    </bottom>
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="5.0" BorderPane.alignment="CENTER">
+            <children>
+                <FontAwesomeIconView glyphName="CC_MASTERCARD" size="28" text=""/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%scene.home.menu.expenditur.payment"
+                      underline="true">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Text>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+        </HBox>
+    </top>
+</BorderPane>

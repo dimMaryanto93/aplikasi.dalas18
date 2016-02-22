@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.octicons.*?>
+<?import java.lang.*?>
+<?import javafx.scene.input.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="700.0" minWidth="1200.0" prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dallastools.actions.HomeAction">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="%scene.home.menu.application">
+                    <items>
+                        <MenuItem fx:id="mnuRegisterAccount" mnemonicParsing="false" onAction="#doRegisterAccount" text="%scene.home.menu.application.register">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="USER_PLUS" size="24" />
+                            </graphic>
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="DIGIT1" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="mniLogin" mnemonicParsing="false" onAction="#doLogin" text="%scene.home.menu.application.login">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="SIGN_IN" size="24" />
+                            </graphic>
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="DIGIT2" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="mniLogout" mnemonicParsing="false" onAction="#doLogout" text="%scene.home.menu.application.logout">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="SIGN_OUT" size="24" />
+                            </graphic>
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="DIGIT3" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#doClose" text="%scene.home.menu.application.exit">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="POWER_OFF" size="24" />
+                            </graphic>
+                            <accelerator>
+                                <KeyCodeCombination alt="DOWN" code="F4" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                        </MenuItem>
+                    </items>
+                    <graphic>
+                        <FontAwesomeIconView glyphName="FILE_ALT" size="24" />
+                    </graphic>
+                </Menu>
+                <Menu fx:id="menuSettings" mnemonicParsing="false" text="%scene.home.menu.setting">
+                    <items>
+                        <MenuItem fx:id="mniAccount" mnemonicParsing="false" onAction="#showAccounts" text="%scene.home.menu.setting.account">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="USERS" size="24" />
+                            </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="mniChangeAccount" mnemonicParsing="false" onAction="#showChangedAccount" text="%scene.home.menu.setting.change.the.account.password">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="KEY" size="24" />
+                            </graphic>
+                        </MenuItem>
+                    </items>
+                    <graphic>
+                        <FontAwesomeIconView glyphName="GEAR" size="24" />
+                    </graphic>
+                </Menu>
+                <Menu mnemonicParsing="false" text="%scene.home.menu.help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="%scene.home.menu.help.contact">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="COMMENTS_ALT" size="24" />
+                            </graphic>
+                        </MenuItem>
+                    </items>
+                    <graphic>
+                        <FontAwesomeIconView glyphName="INFO" size="24" />
+                    </graphic>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <left>
+        <AnchorPane prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+            <children>
+                <TitledPane animated="false" collapsible="false" layoutX="50.0" layoutY="108.0" prefHeight="739.0" prefWidth="300.0" text="%scene.home.menu" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <content>
+                        <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0">
+                            <content>
+                                <VBox prefHeight="128.0" prefWidth="265.0" spacing="10.0">
+                                    <children>
+                                        <TitledPane fx:id="menuMasterData" expanded="false" text="%scene.home.menu.master">
+                                            <content>
+                                                <VBox spacing="5.0">
+                                                    <children>
+                                                        <Button fx:id="btnDepartment" contentDisplay="TOP" disable="true" layoutX="15.0" layoutY="15.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showJobs" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.master.department">
+                                                            <graphic>
+                                                                <FontAwesomeIconView glyphName="BUILDING" size="24" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="btnEmployee" contentDisplay="TOP" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showEmployees" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.master.employee">
+                                                            <graphic>
+                                                                <FontAwesomeIconView glyphName="MALE" size="24" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Separator prefWidth="200.0" />
+                                                        <Button fx:id="btnCategoriOfItem" contentDisplay="TOP" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showCategoriesOfItem" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.master.item.category">
+                                                            <graphic>
+                                                                <FontAwesomeIconView glyphName="NEWSPAPER_ALT" size="24" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="btnUnitOfItem" contentDisplay="TOP" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showUnitOfItem" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.master.item.unit">
+                                                            <graphic>
+                                                                <FontAwesomeIconView glyphName="BOOKMARK_ALT" size="24" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="btnWarehouse" contentDisplay="TOP" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showWarehouse" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.master.item.warehouse">
+                                                            <graphic>
+                                                                <FontAwesomeIconView glyphName="CLONE" size="24" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="btnItem" contentDisplay="TOP" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showItems" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.master.item">
+                                                            <graphic>
+                                                                <FontAwesomeIconView glyphName="GIFT" size="24" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Separator prefWidth="200.0" />
+                                                        <Button fx:id="btnCustomer" contentDisplay="TOP" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showCustomers" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.master.customer">
+                                                            <graphic>
+                                                                <FontAwesomeIconView glyphName="DIAMOND" size="24" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="btnSuplayer" contentDisplay="TOP" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showSuplayers" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.master.suplayer">
+                                                            <graphic>
+                                                                <FontAwesomeIconView glyphName="PAPER_PLANE_ALT" size="24" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Separator prefWidth="200.0" />
+                                                        <Button fx:id="btnCategoryPayment" contentDisplay="TOP" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showCategoryPayment" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.master.payment.category">
+                                                            <graphic>
+                                                                <FontAwesomeIconView glyphName="TAG" size="24" />
+                                                            </graphic>
+                                                        </Button>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                    </padding>
+                                                </VBox>
+                                            </content>
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                            <graphic>
+                                                <OctIconView glyphName="DATABASE" size="24" />
+                                            </graphic>
+                                        </TitledPane>
+                                        <TitledPane fx:id="menuProductions" expanded="false" layoutX="20.0" layoutY="62.0" prefHeight="200.0" prefWidth="200.0" text="%scene.home.menu.production">
+                                            <content>
+                                                <VBox spacing="5.0">
+                                                    <children>
+                                                        <Button fx:id="btnSalesProduction" contentDisplay="TOP" disable="true" layoutX="15.0" layoutY="221.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showSalesProductions" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.production.sales">
+                                                            <graphic>
+                                                                <FontAwesomeIconView glyphName="EXCHANGE" size="24" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="btnProduction" contentDisplay="TOP" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showProductions" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.production.used">
+                                                            <graphic>
+                                                                <FontAwesomeIconView glyphName="ERASER" size="24" />
+                                                            </graphic>
+                                                        </Button>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                    </padding>
+                                                </VBox>
+                                            </content>
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                            <graphic>
+                                                <OctIconView glyphName="PACKAGE" size="24" />
+                                            </graphic>
+                                        </TitledPane>
+                                        <TitledPane fx:id="menuIncome" expanded="false" prefHeight="200.0" prefWidth="200.0" text="%scene.home.menu.income">
+                                            <content>
+                                                <VBox spacing="5.0">
+                                                    <children>
+                                                        <Button fx:id="btnSalesOrder" contentDisplay="TOP" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showSalesOrder" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.income.sales.order">
+                                                            <graphic>
+                                                                <FontAwesomeIconView glyphName="INBOX" size="24" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="btnSales" contentDisplay="TOP" disable="true" layoutX="15.0" layoutY="15.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showSales" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.income.sales">
+                                                            <graphic>
+                                                                <FontAwesomeIconView glyphName="BARCODE" size="24" />
+                                                            </graphic>
+                                                        </Button>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                    </padding>
+                                                </VBox>
+                                            </content>
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                            <graphic>
+                                                <OctIconView glyphName="REPO_PUSH" size="24" />
+                                            </graphic>
+                                        </TitledPane>
+                                        <TitledPane fx:id="menuExpenditur" expanded="false" layoutX="20.0" layoutY="62.0" prefHeight="200.0" prefWidth="200.0" text="%scene.home.menu.expenditur">
+                                            <content>
+                                                <VBox spacing="5.0">
+                                                    <children>
+                                                        <Button fx:id="btnSalesDelivery" contentDisplay="TOP" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showSalesDelivery" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.expenditur.sales.delivery">
+                                                            <graphic>
+                                                                <FontAwesomeIconView glyphName="TRUCK" size="24" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Separator disable="true" prefWidth="200.0" />
+                                                        <Button fx:id="btnPurchase" contentDisplay="TOP" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showPurchasing" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.expenditur.purchase">
+                                                            <graphic>
+                                                                <FontAwesomeIconView glyphName="SHOPPING_CART" size="24" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="btnPayment" contentDisplay="TOP" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showPaymentInvoice" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.expenditur.payment">
+                                                            <graphic>
+                                                                <FontAwesomeIconView glyphName="CC_MASTERCARD" size="24" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Separator disable="true" prefWidth="200.0" />
+                                                        <Button fx:id="btnPayroll" contentDisplay="TOP" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showPayrolls" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.expenditur.payroll">
+                                                            <graphic>
+                                                                <FontAwesomeIconView glyphName="MONEY" size="24" />
+                                                            </graphic>
+                                                        </Button>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                    </padding>
+                                                </VBox>
+                                            </content>
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                            <graphic>
+                                                <OctIconView glyphName="REPO_PULL" size="24" />
+                                            </graphic>
+                                        </TitledPane>
+                                        <TitledPane fx:id="menuReports" expanded="false" layoutX="20.0" layoutY="248.0" text="%scene.home.menu.report">
+                                            <content>
+                                                <VBox spacing="5.0">
+                                                    <children>
+                                                        <Button fx:id="btnReportFinancial" contentDisplay="TOP" disable="true" layoutX="15.0" layoutY="48.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showFinancialStatement" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.report.financial.statement">
+                                                            <graphic>
+                                                                <FontAwesomeIconView glyphName="CHECK_SQUARE_ALT" size="24" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="btnReportIncome" contentDisplay="TOP" disable="true" layoutX="15.0" layoutY="81.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showReportIncome" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.report.sales.income">
+                                                            <graphic>
+                                                                <FontAwesomeIconView glyphName="LINE_CHART" size="24" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="btnReportSalesTurnOver" contentDisplay="TOP" disable="true" layoutX="15.0" layoutY="48.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showSalesTurnOver" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.report.sales.turnover">
+                                                            <graphic>
+                                                                <FontAwesomeIconView glyphName="BAR_CHART" size="24" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="btnReportProductionOfItem" contentDisplay="TOP" disable="true" layoutX="15.0" layoutY="78.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showReportProductionOfItem" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.report.production.of.item">
+                                                            <graphic>
+                                                                <FontAwesomeIconView glyphName="SHOPPING_BASKET" size="24" />
+                                                            </graphic>
+                                                        </Button>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                    </padding>
+                                                </VBox>
+                                            </content>
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="PRINT" size="24" />
+                                            </graphic>
+                                        </TitledPane>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                </VBox>
+                            </content>
+                        </ScrollPane>
+                    </content>
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </TitledPane>
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <BorderPane fx:id="content" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <top>
+                <GridPane hgap="3.0" style="-fx-border-color: gray; -fx-border-radius: 5; -fx-border-width: .5;" vgap="3.0" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <children>
+                        <HBox alignment="CENTER_RIGHT" GridPane.columnIndex="1">
+                            <children>
+                                <Label fx:id="txtName" text="Heri Hermawan">
+                                    <font>
+                                        <Font name="System Bold Italic" size="16.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" spacing="3.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <children>
+                                <Text fx:id="statusLeftUser" layoutX="205.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(" />
+                                <Label fx:id="txtUserId" text="userid">
+                                    <font>
+                                        <Font name="System Italic" size="13.0" />
+                                    </font>
+                                </Label>
+                                <Text fx:id="statusRightUser" strokeType="OUTSIDE" strokeWidth="0.0" text=")" />
+                                <Label fx:id="txtLevel" text="Administrator">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <children>
+                                <Hyperlink fx:id="logoutAction" alignment="CENTER" contentDisplay="RIGHT" layoutX="64.0" onAction="#doLogout" prefHeight="30.0" prefWidth="200.0" text="%scene.home.menu.application.logout" textAlignment="CENTER" underline="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="SIGN_OUT" size="24" />
+                                    </graphic>
+                                </Hyperlink>
+                            </children>
+                        </AnchorPane>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%scene.home.header" GridPane.rowSpan="2">
+                            <font>
+                                <Font size="32.0" />
+                            </font>
+                        </Text>
+                        <Text layoutX="20.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%scene.home.header.title" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="15.0" />
+                            </GridPane.margin>
+                        </Text>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </BorderPane.margin>
+                </GridPane>
+            </top>
+        </BorderPane>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="5.0" style="-fx-border-color: gray; -fx-border-radius: 5; -fx-border-width: 0.25;" BorderPane.alignment="CENTER">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%scene.home.footer" />
+                <FontAwesomeIconView glyphName="COPYRIGHT" size="14" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2015 - 2016" />
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </HBox>
+    </bottom>
+</BorderPane>

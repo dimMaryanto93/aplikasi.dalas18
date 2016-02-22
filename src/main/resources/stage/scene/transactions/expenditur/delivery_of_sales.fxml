@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+            xmlns="http://javafx.com/javafx/8.0.40" fx:controller="dallastools.actions.expeditur.DeliverySalesAction">
+    <left>
+        <AnchorPane BorderPane.alignment="CENTER">
+            <children>
+                <TableView fx:id="tableViewDelivery" layoutX="1.0" minWidth="450.0" prefWidth="500.0"
+                           AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                           AnchorPane.topAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="columnDeliveryProses" maxWidth="150.0" minWidth="150.0" prefWidth="150.0"
+                                     text="%java.model.sales.delivery.status">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="BELL" size="14"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="columnDriver" editable="false" maxWidth="1.7976931348623157E308"
+                                     minWidth="150.0" prefWidth="150.0" text="%scene.sales.delivery.driver">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="AUTOMOBILE" size="14"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="columnDeliveryAction" editable="false" maxWidth="200.0" minWidth="200.0"
+                                     prefWidth="200.0" resizable="false" sortable="false" text="%javafx.action.do">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="TASKS" size="14"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="columnDeliveryId" editable="false" maxWidth="1.7976931348623157E308"
+                                     minWidth="200.0" prefWidth="200.0" text="%java.model.sales.delivery.id">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="KEY" size="14"/>
+                            </graphic>
+                        </TableColumn>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                    <contextMenu>
+                        <ContextMenu>
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#loadData" text="%javafx.action.refresh">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="REFRESH" size="18"/>
+                                    </graphic>
+                                </MenuItem>
+                                <MenuItem mnemonicParsing="false" onAction="#tableDeliveryClearSelection"
+                                          text="%javafx.action.clear.selection">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="SQUARE_ALT" size="18"/>
+                                    </graphic>
+                                </MenuItem>
+                            </items>
+                        </ContextMenu>
+                    </contextMenu>
+                </TableView>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+        </AnchorPane>
+    </left>
+    <center>
+        <GridPane hgap="10.0" vgap="10.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="100.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="100.0"
+                                   prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="1.7976931348623157E308" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%scene.sales.info">
+                    <font>
+                        <Font name="System Bold" size="16.0"/>
+                    </font>
+                </Text>
+                <TableView fx:id="tableViewSales" focusTraversable="false" prefHeight="200.0" prefWidth="200.0"
+                           tableMenuButtonVisible="true" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                    <columns>
+                        <TableColumn prefWidth="75.0" text="%scene.sales.details">
+                            <columns>
+                                <TableColumn fx:id="columnSalesId" editable="false" maxWidth="200.0" minWidth="200.0"
+                                             prefWidth="200.0" sortable="false" text="%java.model.sales.trans.id">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="KEY" size="14"/>
+                                    </graphic>
+                                </TableColumn>
+                                <TableColumn fx:id="columnSalesProses" editable="false" maxWidth="170.0"
+                                             minWidth="170.0" prefWidth="170.0" sortable="false"
+                                             text="%java.model.sales.status.already.sent">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="BELL" size="14"/>
+                                    </graphic>
+                                </TableColumn>
+                            </columns>
+                            <graphic>
+                                <FontAwesomeIconView glyphName="EXPAND" size="14"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="-1.0"
+                                     sortable="false" text="%scene.customer">
+                            <columns>
+                                <TableColumn fx:id="columnSalesCustomerPhone" editable="false" maxWidth="150.0"
+                                             minWidth="150.0" prefWidth="150.0" sortable="false"
+                                             text="%java.model.customer.phone" visible="false">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="PHONE" size="14"/>
+                                    </graphic>
+                                </TableColumn>
+                                <TableColumn fx:id="columnSalesCustomerName" editable="false"
+                                             maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="200.0"
+                                             sortable="false" text="%java.model.customer.name" visible="false">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="ARCHIVE" size="14" text=""/>
+                                    </graphic>
+                                </TableColumn>
+                            </columns>
+                            <graphic>
+                                <FontAwesomeIconView glyphName="COMPRESS" size="14"/>
+                            </graphic>
+                        </TableColumn>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+            </children>
+        </GridPane>
+    </center>
+    <bottom>
+        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <Button defaultButton="true" mnemonicParsing="false" onAction="#newDelivery" prefHeight="35.0"
+                        prefWidth="120.0" text="%javafx.action.new">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="PLUS" size="18"/>
+                    </graphic>
+                </Button>
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#loadData" prefHeight="35.0"
+                        prefWidth="120.0" text="%javafx.action.refresh">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="REFRESH" size="18"/>
+                    </graphic>
+                </Button>
+            </items>
+        </ToolBar>
+    </bottom>
+    <top>
+        <HBox spacing="5.0" BorderPane.alignment="CENTER">
+            <children>
+                <FontAwesomeIconView glyphName="TRUCK" size="28"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%scene.home.menu.expenditur.sales.delivery"
+                      underline="true">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Text>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+        </HBox>
+    </top>
+</BorderPane>

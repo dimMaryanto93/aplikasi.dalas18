@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+	xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="dallastools.actions.reports.FinancialStatementsAction">
+	<center>
+		<ScrollPane fitToHeight="true" fitToWidth="true"
+			focusTraversable="false" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+			<content>
+				<GridPane hgap="10.0" vgap="10.0">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0"
+							minWidth="30.0" prefWidth="30.0" />
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" />
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0"
+							minWidth="170.0" prefWidth="170.0" />
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0"
+							minWidth="100.0" prefWidth="100.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints maxHeight="30.0" minHeight="30.0"
+							prefHeight="30.0" />
+						<RowConstraints maxHeight="30.0" minHeight="30.0"
+							prefHeight="30.0" />
+						<RowConstraints maxHeight="30.0" minHeight="30.0"
+							prefHeight="30.0" />
+						<RowConstraints maxHeight="-Infinity" minHeight="-Infinity" />
+						<RowConstraints maxHeight="30.0" minHeight="30.0"
+							prefHeight="30.0" />
+						<RowConstraints maxHeight="30.0" minHeight="30.0"
+							prefHeight="30.0" />
+						<RowConstraints maxHeight="30.0" minHeight="30.0"
+							prefHeight="30.0" />
+						<RowConstraints maxHeight="30.0" minHeight="30.0"
+							prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="30.0" minHeight="30.0"
+							prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="30.0" minHeight="30.0"
+							prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="30.0" minHeight="30.0"
+							prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="30.0" minHeight="30.0"
+							prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="-Infinity" minHeight="-Infinity"
+							vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="30.0" minHeight="30.0"
+							prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="30.0" minHeight="30.0"
+							prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="30.0" minHeight="30.0"
+							prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="-Infinity" minHeight="-Infinity"
+							vgrow="SOMETIMES" />
+					</rowConstraints>
+					<padding>
+						<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+					</padding>
+					<children>
+						<Text strokeType="OUTSIDE" strokeWidth="0.0"
+							text="%scene.financial.statement.transaction.purchase"
+							GridPane.columnIndex="1" GridPane.rowIndex="7">
+							<GridPane.margin>
+								<Insets left="10.0" />
+							</GridPane.margin>
+						</Text>
+						<AnchorPane prefHeight="200.0" prefWidth="200.0"
+							GridPane.columnIndex="2" GridPane.rowIndex="7">
+							<children>
+								<TextField fx:id="txtPurchase" alignment="CENTER_RIGHT"
+									disable="true" editable="false" layoutX="-21.0" layoutY="1.0"
+									opacity="0.9" prefHeight="30.0" prefWidth="150.0"
+									AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+							</children>
+						</AnchorPane>
+						<AnchorPane prefHeight="200.0" prefWidth="200.0"
+							GridPane.columnIndex="3" GridPane.rowIndex="7">
+							<children>
+								<Button fx:id="btnPurchase" disable="true" layoutX="-1.0"
+									layoutY="3.0" mnemonicParsing="false" onAction="#showPurchases"
+									prefHeight="30.0" prefWidth="61.0" text="%javafx.action.view"
+									AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+									<graphic>
+										<FontAwesomeIconView glyphName="PAPERCLIP"
+											size="18" />
+									</graphic>
+								</Button>
+							</children>
+						</AnchorPane>
+						<Text layoutX="20.0" layoutY="40.0" strokeType="OUTSIDE"
+							strokeWidth="0.0"
+							text="%scene.financial.statement.transaction.payroll.dept.production"
+							GridPane.columnIndex="1" GridPane.rowIndex="9">
+							<GridPane.margin>
+								<Insets left="10.0" />
+							</GridPane.margin>
+						</Text>
+						<AnchorPane layoutX="130.0" layoutY="20.0" prefHeight="200.0"
+							prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="9">
+							<children>
+								<TextField fx:id="txtPayrollEmpProduction" alignment="CENTER_RIGHT"
+									disable="true" editable="false" layoutX="-21.0" layoutY="1.0"
+									opacity="0.9" prefHeight="30.0" prefWidth="150.0"
+									AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+							</children>
+						</AnchorPane>
+						<AnchorPane layoutX="310.0" layoutY="20.0" prefHeight="200.0"
+							prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="9">
+							<children>
+								<Button fx:id="btnPayroll" disable="true" layoutX="-1.0"
+									layoutY="3.0" mnemonicParsing="false" onAction="#showPayroll"
+									prefHeight="30.0" prefWidth="61.0" text="%javafx.action.view"
+									AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+									<graphic>
+										<FontAwesomeIconView glyphName="PAPERCLIP"
+											size="18" />
+									</graphic>
+								</Button>
+							</children>
+						</AnchorPane>
+						<Text layoutX="20.0" layoutY="80.0" strokeType="OUTSIDE"
+							strokeWidth="0.0"
+							text="%scene.financial.statement.transaction.transportation"
+							GridPane.columnIndex="1" GridPane.rowIndex="8">
+							<GridPane.margin>
+								<Insets left="10.0" />
+							</GridPane.margin>
+						</Text>
+						<AnchorPane layoutX="150.0" layoutY="60.0" prefHeight="200.0"
+							prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+							<children>
+								<TextField fx:id="txtTransport" alignment="CENTER_RIGHT"
+									disable="true" editable="false" layoutX="-21.0" layoutY="1.0"
+									opacity="0.9" prefHeight="30.0" prefWidth="150.0"
+									AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+							</children>
+						</AnchorPane>
+						<AnchorPane layoutX="330.0" layoutY="60.0" prefHeight="200.0"
+							prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="8">
+							<children>
+								<Button fx:id="btnTransporation" disable="true" layoutX="-1.0"
+									layoutY="3.0" mnemonicParsing="false" onAction="#showTransport"
+									prefHeight="30.0" prefWidth="61.0" text="%javafx.action.view"
+									AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+									<graphic>
+										<FontAwesomeIconView glyphName="PAPERCLIP"
+											size="18" />
+									</graphic>
+								</Button>
+							</children>
+						</AnchorPane>
+						<Text layoutX="20.0" layoutY="120.0" strokeType="OUTSIDE"
+							strokeWidth="0.0"
+							text="%scene.financial.statement.transaction.other.payment"
+							GridPane.columnIndex="1" GridPane.rowIndex="11">
+							<GridPane.margin>
+								<Insets left="10.0" />
+							</GridPane.margin>
+						</Text>
+						<AnchorPane layoutX="150.0" layoutY="100.0" prefHeight="200.0"
+							prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="11">
+							<children>
+								<TextField fx:id="txtOtherPayment" alignment="CENTER_RIGHT"
+									disable="true" editable="false" layoutX="-21.0" layoutY="1.0"
+									opacity="0.9" prefHeight="30.0" prefWidth="150.0"
+									AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+							</children>
+						</AnchorPane>
+						<AnchorPane layoutX="330.0" layoutY="100.0" prefHeight="200.0"
+							prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="11">
+							<children>
+								<Button fx:id="btnOtherPayment" disable="true" layoutX="-1.0"
+									layoutY="3.0" mnemonicParsing="false" onAction="#showOtherPayment"
+									prefHeight="30.0" prefWidth="61.0" text="%javafx.action.view"
+									AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+									<graphic>
+										<FontAwesomeIconView glyphName="PAPERCLIP"
+											size="18" />
+									</graphic>
+								</Button>
+							</children>
+						</AnchorPane>
+						<Separator prefWidth="200.0" GridPane.columnIndex="2"
+							GridPane.rowIndex="12" />
+						<AnchorPane layoutX="150.0" layoutY="180.0" prefHeight="200.0"
+							prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="13">
+							<children>
+								<TextField fx:id="txtTotalExpenditure" alignment="CENTER_RIGHT"
+									disable="true" editable="false" layoutX="-21.0" layoutY="1.0"
+									opacity="0.9" prefHeight="30.0" prefWidth="150.0"
+									AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+							</children>
+						</AnchorPane>
+						<Text strokeType="OUTSIDE" strokeWidth="0.0" text="+"
+							GridPane.columnIndex="3" GridPane.rowIndex="12">
+							<font>
+								<Font size="16.0" />
+							</font>
+						</Text>
+						<Text layoutX="20.0" layoutY="40.0" strokeType="OUTSIDE"
+							strokeWidth="0.0" text="%scene.financial.statement.sales"
+							GridPane.columnIndex="1" GridPane.rowIndex="2">
+							<GridPane.margin>
+								<Insets left="10.0" />
+							</GridPane.margin>
+						</Text>
+						<AnchorPane layoutX="150.0" layoutY="20.0" prefHeight="200.0"
+							prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+							<children>
+								<TextField fx:id="txtSales" alignment="CENTER_RIGHT"
+									disable="true" editable="false" layoutX="-21.0" layoutY="1.0"
+									opacity="0.9" prefHeight="30.0" prefWidth="150.0"
+									AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+							</children>
+						</AnchorPane>
+						<AnchorPane layoutX="330.0" layoutY="20.0" prefHeight="200.0"
+							prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+							<children>
+								<Button fx:id="btnSales" disable="true" layoutX="-1.0"
+									layoutY="3.0" mnemonicParsing="false" onAction="#showSales"
+									prefHeight="30.0" prefWidth="61.0" text="%javafx.action.view"
+									AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+									<graphic>
+										<FontAwesomeIconView glyphName="PAPERCLIP"
+											size="18" />
+									</graphic>
+								</Button>
+							</children>
+						</AnchorPane>
+						<Text strokeType="OUTSIDE" strokeWidth="0.0"
+							text="%scene.financial.statement.transaction.total.expenses"
+							GridPane.columnIndex="1" GridPane.rowIndex="13">
+							<font>
+								<Font name="System Bold" size="12.0" />
+							</font>
+						</Text>
+						<Text strokeType="OUTSIDE" strokeWidth="0.0"
+							text="%scene.financial.statement" GridPane.columnSpan="2147483647">
+							<font>
+								<Font name="System Bold" size="24.0" />
+							</font>
+						</Text>
+						<Text layoutX="20.0" layoutY="39.0" strokeType="OUTSIDE"
+							strokeWidth="0.0" text="%scene.financial.statement.transaction.revenue"
+							GridPane.columnIndex="1" GridPane.columnSpan="2147483647"
+							GridPane.rowIndex="1">
+							<font>
+								<Font name="System Bold" size="16.0" />
+							</font>
+						</Text>
+						<Text layoutX="60.0" layoutY="75.0" strokeType="OUTSIDE"
+							strokeWidth="0.0" text="%scene.financial.statement.transaction.expenses"
+							GridPane.columnIndex="1" GridPane.columnSpan="2147483647"
+							GridPane.rowIndex="6">
+							<font>
+								<Font name="System Bold" size="16.0" />
+							</font>
+						</Text>
+						<Text layoutX="60.0" layoutY="463.0" strokeType="OUTSIDE"
+							strokeWidth="0.0" text="%scene.financial.statement.transaction.total.income"
+							GridPane.columnIndex="1" GridPane.rowIndex="4">
+							<font>
+								<Font name="System Bold" size="12.0" />
+							</font>
+						</Text>
+						<Separator layoutX="215.0" layoutY="422.0" prefWidth="200.0"
+							GridPane.columnIndex="2" GridPane.rowIndex="3" />
+						<Text layoutX="395.0" layoutY="429.0" strokeType="OUTSIDE"
+							strokeWidth="0.0" text="+" GridPane.columnIndex="3"
+							GridPane.rowIndex="3">
+							<font>
+								<Font size="16.0" />
+							</font>
+						</Text>
+						<AnchorPane layoutX="215.0" layoutY="94.0" prefHeight="200.0"
+							prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+							<children>
+								<TextField fx:id="txtTotalIncome" alignment="CENTER_RIGHT"
+									disable="true" editable="false" layoutX="-21.0" layoutY="1.0"
+									opacity="0.9" prefHeight="30.0" prefWidth="150.0"
+									AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+							</children>
+						</AnchorPane>
+						<Text layoutX="70.0" layoutY="463.0" strokeType="OUTSIDE"
+							strokeWidth="0.0"
+							text="%scene.financial.statement.transaction.cash.reciept.employees"
+							GridPane.columnIndex="1" GridPane.rowIndex="10">
+							<GridPane.margin>
+								<Insets left="10.0" />
+							</GridPane.margin>
+						</Text>
+						<AnchorPane layoutX="241.0" layoutY="403.0" prefHeight="200.0"
+							prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="10">
+							<children>
+								<TextField fx:id="txtEmployeeCashReciept" alignment="CENTER_RIGHT"
+									disable="true" editable="false" layoutX="-21.0" layoutY="1.0"
+									opacity="0.9" prefHeight="30.0" prefWidth="150.0"
+									AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+							</children>
+						</AnchorPane>
+						<AnchorPane layoutX="421.0" layoutY="403.0" prefHeight="200.0"
+							prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="10">
+							<children>
+								<Button fx:id="btnCashReciept" disable="true" layoutX="-1.0"
+									layoutY="3.0" mnemonicParsing="false" onAction="#showCashReciept"
+									prefHeight="30.0" prefWidth="61.0" text="%javafx.action.view"
+									AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+									<graphic>
+										<FontAwesomeIconView glyphName="PAPERCLIP"
+											size="18" />
+									</graphic>
+								</Button>
+							</children>
+						</AnchorPane>
+						<Text layoutX="60.0" layoutY="268.0" strokeType="OUTSIDE"
+							strokeWidth="0.0" text="%scene.financial.statement.transaction.net.income"
+							GridPane.columnIndex="1" GridPane.rowIndex="15">
+							<font>
+								<Font name="System Bold" size="16.0" />
+							</font>
+						</Text>
+						<AnchorPane layoutX="242.0" layoutY="556.0" prefHeight="200.0"
+							prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="15">
+							<children>
+								<TextField fx:id="txtNetIncome" alignment="CENTER_RIGHT"
+									disable="true" editable="false" layoutX="-21.0" layoutY="1.0"
+									opacity="0.9" prefHeight="30.0" prefWidth="150.0"
+									AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+							</children>
+						</AnchorPane>
+					</children>
+				</GridPane>
+			</content>
+		</ScrollPane>
+	</center>
+	<top>
+		<ToolBar BorderPane.alignment="CENTER">
+			<items>
+				<CheckBox fx:id="checkedPrinted" mnemonicParsing="false"
+					prefHeight="30.0" text="%javafx.action.print" selected="true"/>
+				<Separator orientation="VERTICAL" />
+				<Text strokeType="OUTSIDE" strokeWidth="0.0"
+					text="%scene.financial.statement.for.period" />
+				<DatePicker fx:id="txtFirstDate" editable="false"
+					prefHeight="30.0" prefWidth="150.0"
+					promptText="%scene.financial.statement.the.earliest.date" />
+				<Text strokeType="OUTSIDE" strokeWidth="0.0" text="s/d" />
+				<DatePicker fx:id="txtLastDate" editable="false"
+					prefHeight="30.0" prefWidth="150.0" promptText="%scene.financial.statement.end.date" />
+				<Text strokeType="OUTSIDE" strokeWidth="0.0"
+					text="%scene.financial.statement.processed.on" />
+				<Hyperlink fx:id="action" onAction="#doAction"
+					text="%scene.financial.statement.unprocessed" underline="true">
+					<font>
+						<Font name="System Bold" size="16.0" />
+					</font>
+				</Hyperlink>
+			</items>
+		</ToolBar>
+	</top>
+</BorderPane>

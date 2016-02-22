@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.input.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+	prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="dallastools.actions.productions.ProductionSalesAction">
+	<left>
+		<AnchorPane prefHeight="360.0" prefWidth="411.0">
+			<children>
+				<TitledPane collapsible="false" prefHeight="360.0"
+					prefWidth="228.0" text="%scene.production.item"
+					AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+					AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+					<padding>
+						<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+					</padding>
+					<font>
+						<Font name="System Bold" size="14.0" />
+					</font>
+					<content>
+						<TableView fx:id="tableProduction" prefHeight="200.0"
+							prefWidth="200.0">
+							<columns>
+								<TableColumn fx:id="columnProductionId" editable="false"
+									maxWidth="1.7976931348623157E308" minWidth="75.0" prefWidth="75.0"
+									sortable="false" text="%java.model.production.sales.id">
+									<graphic>
+										<FontAwesomeIconView glyphName="KEY" size="14" />
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="columnProductionDate" editable="false"
+									maxWidth="120.0" minWidth="120.0" prefWidth="120.0"
+									text="%java.model.production.sales.date">
+									<graphic>
+										<FontAwesomeIconView glyphName="CALENDAR"
+											size="14" />
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="columnProductionAction"
+									editable="false" maxWidth="170.0" minWidth="170.0" prefWidth="170.0"
+									sortable="false" text="%javafx.action.do">
+									<graphic>
+										<FontAwesomeIconView glyphName="TASKS"
+											size="14" />
+									</graphic>
+								</TableColumn>
+							</columns>
+							<columnResizePolicy>
+								<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+							</columnResizePolicy>
+							<contextMenu>
+								<ContextMenu>
+									<items>
+										<MenuItem mnemonicParsing="false" onAction="#loadData"
+											text="%javafx.action.refresh">
+											<graphic>
+												<FontAwesomeIconView glyphName="REFRESH"
+													size="18" />
+											</graphic>
+											<accelerator>
+												<KeyCodeCombination alt="UP" code="F5"
+													control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+											</accelerator>
+										</MenuItem>
+										<MenuItem mnemonicParsing="false"
+											onAction="#tableMasterClearSelection" text="%javafx.action.clear.selection">
+											<graphic>
+												<FontAwesomeIconView glyphName="SQUARE_ALT"
+													size="18" />
+											</graphic>
+										</MenuItem>
+									</items>
+								</ContextMenu>
+							</contextMenu>
+						</TableView>
+					</content>
+					<graphic>
+						<FontAwesomeIconView glyphName="HASHTAG" size="18" />
+					</graphic>
+				</TitledPane>
+			</children>
+		</AnchorPane>
+	</left>
+	<center>
+		<GridPane hgap="10.0" vgap="10.0" BorderPane.alignment="CENTER">
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308"
+					minWidth="150.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints maxHeight="30.0" minHeight="30.0"
+					prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints maxHeight="1.7976931348623157E308"
+					vgrow="SOMETIMES" />
+			</rowConstraints>
+			<BorderPane.margin>
+				<Insets />
+			</BorderPane.margin>
+			<padding>
+				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+			</padding>
+			<children>
+				<Text strokeType="OUTSIDE" strokeWidth="0.0"
+					text="%scene.production.item.text">
+					<font>
+						<Font name="System Bold" size="20.0" />
+					</font>
+				</Text>
+				<AnchorPane GridPane.columnSpan="2147483647"
+					GridPane.rowIndex="1">
+					<children>
+						<TableView fx:id="tableView" layoutX="101.0" layoutY="30.0"
+							prefHeight="260.0" prefWidth="512.0" AnchorPane.bottomAnchor="0.0"
+							AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+							AnchorPane.topAnchor="0.0">
+							<columns>
+								<TableColumn fx:id="columnItemId" editable="false"
+									maxWidth="150.0" minWidth="150.0" prefWidth="150.0" sortable="false"
+									text="%java.model.item.itemgeneragor">
+									<graphic>
+										<FontAwesomeIconView glyphName="KEY" size="14" />
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="columnItemName" editable="false"
+									maxWidth="1.7976931348623157E308" minWidth="150.0" prefWidth="150.0"
+									text="%scene.item.placeholder.name">
+									<graphic>
+										<FontAwesomeIconView glyphName="ARCHIVE"
+											size="14" />
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="columnItemQty" editable="false"
+									maxWidth="75.0" minWidth="75.0" prefWidth="75.0" sortable="false"
+									text="%java.model.item.qty">
+									<graphic>
+										<FontAwesomeIconView glyphName="BELL"
+											size="14" />
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="columnStockNeeded" editable="false"
+									maxWidth="75.0" minWidth="75.0" prefWidth="75.0"
+									text="%scene.production.item.placeholder.need">
+									<graphic>
+										<FontAwesomeIconView glyphName="BELL"
+											size="14" />
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="columnStockPending" editable="false"
+									maxWidth="75.0" minWidth="75.0" prefWidth="75.0"
+									text="%scene.production.item.placeholder.div">
+									<graphic>
+										<FontAwesomeIconView glyphName="ARCHIVE"
+											size="14" />
+									</graphic>
+								</TableColumn>
+							</columns>
+							<columnResizePolicy>
+								<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+							</columnResizePolicy>
+							<contextMenu>
+								<ContextMenu>
+									<items>
+										<MenuItem mnemonicParsing="false"
+											onAction="#tableRelationClearSelection" text="%javafx.action.clear.selection">
+											<graphic>
+												<FontAwesomeIconView glyphName="SQUARE_ALT"
+													size="18" />
+											</graphic>
+										</MenuItem>
+									</items>
+								</ContextMenu>
+							</contextMenu>
+						</TableView>
+					</children>
+				</AnchorPane>
+			</children>
+		</GridPane>
+	</center>
+	<bottom>
+		<ToolBar BorderPane.alignment="CENTER">
+			<items>
+				<Button defaultButton="true" layoutX="10.0" layoutY="10.0"
+					mnemonicParsing="false" onAction="#newData" prefHeight="35.0"
+					prefWidth="120.0" text="%javafx.action.new">
+					<graphic>
+						<FontAwesomeIconView glyphName="PLUS" size="18" />
+					</graphic>
+					<tooltip>
+						<Tooltip text="Empty Tooltip" />
+					</tooltip>
+				</Button>
+				<Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false"
+					onAction="#loadData" prefHeight="35.0" prefWidth="120.0"
+					text="%javafx.action.refresh">
+					<graphic>
+						<FontAwesomeIconView glyphName="REFRESH" size="18" />
+					</graphic>
+				</Button>
+				<Button layoutX="134.0" layoutY="10.0" mnemonicParsing="false"
+					onAction="#printed" prefHeight="35.0" prefWidth="120.0"
+					text="%javafx.action.print">
+					<graphic>
+						<FontAwesomeIconView glyphName="PRINT" size="18" />
+					</graphic>
+				</Button>
+			</items>
+		</ToolBar>
+	</bottom>
+	<top>
+		<HBox alignment="CENTER_LEFT" spacing="10.0">
+			<children>
+				<FontAwesomeIconView glyphName="EXCHANGE" size="24" />
+				<Text strokeType="OUTSIDE" strokeWidth="0.0"
+					text="%scene.home.menu.production.sales" underline="true">
+					<font>
+						<Font name="System Bold" size="20.0" />
+					</font>
+				</Text>
+			</children>
+			<padding>
+				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+			</padding>
+		</HBox>
+	</top>
+</BorderPane>

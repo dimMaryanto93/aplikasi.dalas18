@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+            xmlns="http://javafx.com/javafx/8.0.40" fx:controller="dallastools.actions.masterdata.ItemDataAction">
+    <center>
+        <ScrollPane hbarPolicy="NEVER" vbarPolicy="ALWAYS">
+            <content>
+                <GridPane hgap="10.0" minHeight="-Infinity" minWidth="-Infinity" vgap="10.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="120.0" prefWidth="120.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="120.0" prefWidth="120.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="60.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </padding>
+                    <children>
+                        <Text layoutX="40.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.item.name">
+                            <GridPane.margin>
+                                <Insets left="10.0"/>
+                            </GridPane.margin>
+                        </Text>
+                        <Text layoutX="40.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.item.warehouse" GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets left="10.0"/>
+                            </GridPane.margin>
+                        </Text>
+                        <Text layoutX="40.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.item.price.sell" GridPane.rowIndex="5">
+                            <GridPane.margin>
+                                <Insets left="10.0"/>
+                            </GridPane.margin>
+                        </Text>
+                        <Text layoutX="40.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.item.price.buy" GridPane.rowIndex="6">
+                            <GridPane.margin>
+                                <Insets left="10.0"/>
+                            </GridPane.margin>
+                        </Text>
+                        <Text layoutX="40.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.item.is.sell" GridPane.rowIndex="7">
+                            <GridPane.margin>
+                                <Insets left="10.0"/>
+                            </GridPane.margin>
+                        </Text>
+                        <Text layoutX="40.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.item.category" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="10.0"/>
+                            </GridPane.margin>
+                        </Text>
+                        <Text layoutX="40.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.item.unit" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets left="10.0"/>
+                            </GridPane.margin>
+                        </Text>
+                        <AnchorPane layoutX="270.0" layoutY="110.0" prefHeight="200.0" prefWidth="200.0"
+                                    GridPane.columnIndex="1" GridPane.columnSpan="2147483647">
+                            <children>
+                                <TextField fx:id="txtName" layoutY="3.0" prefHeight="30.0" prefWidth="171.0"
+                                           promptText="%scene.item.placeholder.id" AnchorPane.bottomAnchor="0.0"
+                                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                           AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                                    GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                            <children>
+                                <ChoiceBox fx:id="txtCategory" layoutY="2.0" prefHeight="30.0" prefWidth="280.0"
+                                           AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                           AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                                    GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+                            <children>
+                                <ComboBox fx:id="txtUnit" layoutX="57.0" layoutY="3.0" prefHeight="30.0"
+                                          prefWidth="280.0" promptText="%scene.item.placeholder.select.unit"
+                                          AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                                    GridPane.columnSpan="2147483647" GridPane.rowIndex="3">
+                            <children>
+                                <ComboBox fx:id="txtWarehouse" layoutX="7.0" layoutY="14.0" prefHeight="40.0"
+                                          prefWidth="280.0" promptText="%scene.item.placeholder.select.warehouse"
+                                          AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                                    GridPane.columnSpan="2" GridPane.rowIndex="5">
+                            <children>
+                                <Spinner fx:id="txtPriceSell" layoutY="1.0" prefHeight="30.0" prefWidth="171.0"
+                                         AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                         AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="270.0" layoutY="310.0" prefHeight="200.0" prefWidth="200.0"
+                                    GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6">
+                            <children>
+                                <Spinner fx:id="txtPriceBuy" layoutY="1.0" prefHeight="30.0" prefWidth="171.0"
+                                         AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                         AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="160.0" layoutY="350.0" prefHeight="200.0" prefWidth="200.0"
+                                    GridPane.columnIndex="2" GridPane.rowIndex="7">
+                            <children>
+                                <RadioButton fx:id="txtOnSale" layoutY="5.0" mnemonicParsing="false" prefHeight="30.0"
+                                             prefWidth="105.0" text="%scene.item.placeholder.select.sale"
+                                             AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                             AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="isSale"/>
+                                    </toggleGroup>
+                                </RadioButton>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                            <children>
+                                <RadioButton fx:id="txtNotForSale" mnemonicParsing="false" prefHeight="30.0"
+                                             prefWidth="105.0" selected="true"
+                                             text="%scene.item.placeholder.select.notforsale" toggleGroup="$isSale"
+                                             AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                             AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                            <children>
+                                <Button fx:id="btnSave" defaultButton="true" layoutX="24.0" layoutY="3.0"
+                                        mnemonicParsing="false" onAction="#doSave" prefHeight="30.0" prefWidth="100.0"
+                                        text="%javafx.action.save" AnchorPane.bottomAnchor="0.0"
+                                        AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                        AnchorPane.topAnchor="0.0">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="SAVE" size="18"/>
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="160.0" layoutY="470.0" prefHeight="200.0" prefWidth="200.0"
+                                    GridPane.columnIndex="2" GridPane.rowIndex="8">
+                            <children>
+                                <Button cancelButton="true" layoutX="24.0" layoutY="3.0" mnemonicParsing="false"
+                                        onAction="#doClose" prefHeight="30.0" prefWidth="100.0"
+                                        text="%javafx.action.cancel" AnchorPane.bottomAnchor="0.0"
+                                        AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                        AnchorPane.topAnchor="0.0">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="EJECT" size="18" text=""/>
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </GridPane>
+            </content>
+        </ScrollPane>
+    </center>
+    <top>
+        <HBox spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <FontAwesomeIconView glyphName="GIFT" size="28"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%scene.home.menu.master.item.an-item">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Text>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+        </HBox>
+    </top>
+</BorderPane>

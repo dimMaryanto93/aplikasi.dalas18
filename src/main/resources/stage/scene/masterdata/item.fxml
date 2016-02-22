@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.40" fx:controller="dallastools.actions.masterdata.ItemAction">
+    <right>
+        <ScrollPane hbarPolicy="NEVER" pannable="true" vbarPolicy="ALWAYS">
+            <content>
+                <GridPane hgap="10.0" vgap="10.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="60.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <children>
+                        <Text layoutX="30.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%java.model.item.qty" GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Text>
+                        <Text layoutX="30.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%java.model.item.warehouse" GridPane.rowIndex="7">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Text>
+                        <Text layoutX="30.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%java.model.item.id" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%scene.item" GridPane.columnSpan="2147483647">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Text>
+                        <Text layoutX="30.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%java.model.item.name" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Text>
+                        <Text layoutX="30.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%java.model.item.category" GridPane.rowIndex="5">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Text>
+                        <Text layoutX="30.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%java.model.item.unit" GridPane.rowIndex="6">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Text>
+                        <Text layoutX="30.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.item.price.sell" GridPane.rowIndex="9">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Text>
+                        <Text layoutX="30.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%java.model.item.price.buy" GridPane.rowIndex="10">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Text>
+                        <Text layoutX="30.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%java.model.item.is.sell" GridPane.rowIndex="11">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Text>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+                            <children>
+                                <TextField fx:id="txtName" disable="true" editable="false" focusTraversable="false" layoutX="-15.0" layoutY="1.0" opacity="0.9" prefHeight="30.0" prefWidth="170.0" promptText="%scene.item.placeholder.name" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="150.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="5">
+                            <children>
+                                <TextField fx:id="txtCategory" disable="true" editable="false" focusTraversable="false" layoutX="-15.0" layoutY="1.0" opacity="0.9" prefHeight="30.0" prefWidth="170.0" promptText="%scene.item.placeholder.category" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="150.0" layoutY="140.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="6">
+                            <children>
+                                <TextField fx:id="txtUnit" disable="true" editable="false" focusTraversable="false" layoutX="-15.0" layoutY="1.0" opacity="0.9" prefHeight="30.0" prefWidth="170.0" promptText="%scene.item.placeholder.unit" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="150.0" layoutY="180.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="9">
+                            <children>
+                                <TextField fx:id="txtPriceSell" alignment="CENTER_RIGHT" disable="true" editable="false" focusTraversable="false" layoutX="-15.0" layoutY="1.0" opacity="0.9" prefHeight="30.0" prefWidth="170.0" promptText="%scene.item.placeholder.rupiah" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="150.0" layoutY="220.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="10">
+                            <children>
+                                <TextField fx:id="txtPriceBuy" alignment="CENTER_RIGHT" disable="true" editable="false" focusTraversable="false" layoutX="-15.0" layoutY="1.0" opacity="0.9" prefHeight="30.0" prefWidth="170.0" promptText="%scene.item.placeholder.rupiah" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="11">
+                            <children>
+                                <CheckBox fx:id="txtCheckSell" disable="true" focusTraversable="false" layoutX="-8.0" layoutY="7.0" mnemonicParsing="false" opacity="0.9" prefHeight="30.0" prefWidth="81.0" text="%scene.item.placeholder.onsale" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="130.0" layoutY="140.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                            <children>
+                                <TextField fx:id="txtId" disable="true" editable="false" focusTraversable="false" layoutX="-15.0" layoutY="1.0" opacity="0.9" prefHeight="30.0" prefWidth="170.0" promptText="%scene.item.placeholder.id" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="130.0" layoutY="260.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="7">
+                            <children>
+                                <TextField fx:id="txtWarehouse" disable="true" editable="false" focusTraversable="false" layoutX="-15.0" layoutY="1.0" opacity="0.9" prefHeight="30.0" prefWidth="170.0" promptText="%scene.item.placeholder.warehouse" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="130.0" layoutY="140.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <children>
+                                <TextField fx:id="txtQty" alignment="CENTER" disable="true" editable="false" focusTraversable="false" layoutX="-15.0" layoutY="1.0" opacity="0.9" prefHeight="30.0" prefWidth="170.0" promptText="%java.model.item.qty" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </GridPane>
+            </content>
+        </ScrollPane>
+    </right>
+    <center>
+        <AnchorPane>
+            <children>
+                <TableView fx:id="tableView" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="columnWarehouse" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" text="%scene.item.tablerelation.warehouse.id">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="COMPRESS" size="14" />
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="columnCategory" editable="false" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="%scene.item.tablerelation.category">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="COMPRESS" size="14" />
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="columnName" editable="false" minWidth="150.0" prefWidth="150.0" text="%java.model.item.name">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="ARCHIVE" size="14" />
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="columnQty" editable="false" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="%scene.item.tablerelation.qtyperunit">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="BELL" size="14" />
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="columnAction" editable="false" maxWidth="170.0" minWidth="170.0" prefWidth="170.0" sortable="false" text="%javafx.action.do">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="TASKS" size="14" />
+                            </graphic>
+                        </TableColumn>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                    <contextMenu>
+                        <ContextMenu>
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#loadData" text="%javafx.action.refresh">
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="F5" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator>
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="REFRESH" size="18" />
+                                    </graphic>
+                                </MenuItem>
+                                <MenuItem mnemonicParsing="false" onAction="#tableViewClearSelection" text="%javafx.action.clear.selection">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="SQUARE_ALT" size="18" />
+                                    </graphic>
+                                </MenuItem>
+                            </items>
+                        </ContextMenu>
+                    </contextMenu>
+                </TableView>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </AnchorPane>
+    </center>
+    <bottom>
+        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <Button defaultButton="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#newItem" prefHeight="35.0" prefWidth="120.0" text="%javafx.action.new">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="PLUS" size="18" />
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="%scene.item.tooltips.new" />
+                    </tooltip>
+                </Button>
+                <Button layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loadData" prefHeight="35.0" prefWidth="120.0" text="%javafx.action.refresh">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="REFRESH" size="18" />
+                    </graphic>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#doPrint" prefHeight="35.0" prefWidth="120.0" text="%javafx.action.print">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="PRINT" size="18" />
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="%scene.item.tooltips.print" />
+                    </tooltip>
+                </Button>
+            </items>
+        </ToolBar>
+    </bottom>
+    <top>
+        <HBox spacing="10.0">
+            <children>
+                <FontAwesomeIconView glyphName="GIFT" size="28" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%scene.home.menu.master.item">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Text>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </HBox>
+    </top>
+</BorderPane>

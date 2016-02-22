@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+            xmlns="http://javafx.com/javafx/8.0.40" fx:controller="dallastools.actions.income.SalesOrderAction">
+    <center>
+        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+            <children>
+                <TableView fx:id="tableView" layoutX="229.0" layoutY="42.0" prefHeight="462.0" prefWidth="1041.0"
+                           AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                           AnchorPane.topAnchor="0.0">
+                    <columns>
+                        <TableColumn maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="%scene.sales.order.data">
+                            <columns>
+                                <TableColumn fx:id="columnId" editable="false" maxWidth="80.0" minWidth="80.0"
+                                             sortable="false" text="%java.model.sales.order.id">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="KEY" size="14"/>
+                                    </graphic>
+                                </TableColumn>
+                                <TableColumn fx:id="columnOrder" maxWidth="120.0" minWidth="120.0" prefWidth="120.0"
+                                             text="%java.model.sales.order.date">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="CALENDAR" size="14"/>
+                                    </graphic>
+                                </TableColumn>
+                                <TableColumn fx:id="columnDoSell" editable="false" maxWidth="120.0" minWidth="120.0"
+                                             prefWidth="120.0" sortable="false" text="%scene.sales.order.do.sale">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="BELL" size="14"/>
+                                    </graphic>
+                                </TableColumn>
+                                <TableColumn fx:id="columnAction" editable="false" maxWidth="250.0" minWidth="250.0"
+                                             prefWidth="250.0" sortable="false" text="%javafx.action.do">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="TASKS" size="14"/>
+                                    </graphic>
+                                </TableColumn>
+                            </columns>
+                            <graphic>
+                                <FontAwesomeIconView glyphName="EXPAND" size="14"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn maxWidth="-Infinity" minWidth="-Infinity" prefWidth="-1.0" text="%scene.customer">
+                            <columns>
+                                <TableColumn fx:id="columnCustomerContact" editable="false" maxWidth="150.0"
+                                             minWidth="150.0" prefWidth="150.0" text="%java.model.customer.phone">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="PHONE" size="14"/>
+                                    </graphic>
+                                </TableColumn>
+                                <TableColumn fx:id="columnCustomerName" maxWidth="1.7976931348623157E308"
+                                             minWidth="200.0" prefWidth="200.0" text="%java.model.customer.name">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="ARCHIVE" size="14"/>
+                                    </graphic>
+                                </TableColumn>
+                            </columns>
+                            <graphic>
+                                <FontAwesomeIconView glyphName="EXPAND" size="14"/>
+                            </graphic>
+                        </TableColumn>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                    <contextMenu>
+                        <ContextMenu>
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#loadData" text="%javafx.action.refresh">
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="F5" control="DOWN" meta="UP" shift="UP"
+                                                            shortcut="UP"/>
+                                    </accelerator>
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="REFRESH" size="18"/>
+                                    </graphic>
+                                </MenuItem>
+                                <MenuItem mnemonicParsing="false" onAction="#tableViewClearSelection"
+                                          text="%javafx.action.clear.selection">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="SQUARE_ALT" size="18"/>
+                                    </graphic>
+                                </MenuItem>
+                            </items>
+                        </ContextMenu>
+                    </contextMenu>
+                </TableView>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+        </AnchorPane>
+    </center>
+    <bottom>
+        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <Button defaultButton="true" mnemonicParsing="false" onAction="#newSalesOrder" prefHeight="35.0"
+                        prefWidth="120.0" text="%javafx.action.new">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="PLUS" size="18"/>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="%scene.sales.order.tooltips.new.sales.order"/>
+                    </tooltip>
+                </Button>
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#loadData" prefHeight="35.0"
+                        prefWidth="120.0" text="%javafx.action.refresh">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="REFRESH" size="18"/>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="%javafx.tooltips.refresh"/>
+                    </tooltip>
+                </Button>
+            </items>
+        </ToolBar>
+    </bottom>
+    <top>
+        <HBox spacing="5.0" BorderPane.alignment="CENTER">
+            <children>
+                <FontAwesomeIconView glyphName="INBOX" size="28"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%scene.home.menu.income.sales.order"
+                      underline="true">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Text>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+        </HBox>
+    </top>
+</BorderPane>

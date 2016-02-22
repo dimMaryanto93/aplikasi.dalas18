@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
+<!-- 2016-01-18T20:47:19 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="financial_statement" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="fc3b6066-45f5-4c32-a02b-42608d9c04d3">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="datePeriode" class="java.lang.String"/>
+	<parameter name="sales" class="java.lang.Double"/>
+	<parameter name="salesTurnover" class="java.lang.Double"/>
+	<parameter name="transport" class="java.lang.Double"/>
+	<parameter name="production" class="java.lang.Double"/>
+	<parameter name="purchase" class="java.lang.Double"/>
+	<parameter name="payment" class="java.lang.Double"/>
+	<parameter name="cashReciept" class="java.lang.Double"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<title>
+		<band height="56" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="180" height="20" uuid="b422d375-db74-4a9d-8b69-b9add99726e8"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dallas Ice Cream]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="20" width="170" height="20" uuid="f8c30c37-a27d-42bb-97bf-63f93417cdb3"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[jl. cempaka no.12 Lembang]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="40" width="180" height="1" uuid="f1315e01-4270-4384-b533-ef19ea0af68e"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="41" width="60" height="15" uuid="7b615a06-046e-4a26-88a8-6cd621bd70a7">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[waktu cetak:]]></text>
+			</staticText>
+			<textField pattern="MMM d, yyyy h:mm:ss a">
+				<reportElement x="60" y="41" width="120" height="15" uuid="2017f63a-d1d8-4d2a-a44a-12e794df525f">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="297" splitType="Stretch">
+			<staticText>
+				<reportElement x="178" y="0" width="199" height="19" uuid="86da4bbb-0284-4a88-9e13-bd0795087e4d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Keuangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="19" width="50" height="19" uuid="5111f37c-ba5c-4a8e-b199-788001d96372"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[periode:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="228" y="19" width="180" height="18" uuid="5cb616c0-bb56-4046-a624-c818d90d7b87"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{datePeriode}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="50" width="170" height="20" uuid="0c8aca66-07e8-424c-9469-0911ffb343c3">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pendapatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="70" width="150" height="15" uuid="e3d18cb3-ac53-4a6c-b1b4-fa5ea18e5606">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Total Penjualan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="85" width="150" height="15" uuid="c34e455f-2fd7-49e0-bdbd-9b7e5693f020">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Piutang Penjualan]]></text>
+			</staticText>
+			<line>
+				<reportElement x="20" y="100" width="270" height="1" uuid="e42092a2-9afa-4504-b656-cee0e03a574c"/>
+			</line>
+			<staticText>
+				<reportElement x="310" y="116" width="144" height="15" uuid="fff3da0f-e581-451a-8b1d-e0a065d246ec">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pendapatan bersih]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="130" width="170" height="20" uuid="3deaf6f7-093c-41d0-99af-fa77878d2c6c">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Beban Operasional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="150" width="150" height="15" uuid="8c11c897-9d3f-4c6a-b6e6-88b1468ecd30">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Transpotasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="165" width="150" height="15" uuid="8c604292-e4c9-477a-aa46-a574c7aa1287">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Produksi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="195" width="150" height="15" uuid="e4bd24fa-32be-45c3-8b6c-1217334b22af">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Pembayaran lain-lain]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="210" width="150" height="15" uuid="dbfa96ee-7506-4a8b-a99c-f9cf4b6fdb46">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Beban Operasional]]></text>
+			</staticText>
+			<line>
+				<reportElement x="20" y="210" width="270" height="1" uuid="c0e4bdf2-aeca-45ec-8580-0224942094d4"/>
+			</line>
+			<staticText>
+				<reportElement x="20" y="180" width="150" height="15" uuid="094c0333-89d5-4a40-8325-2cfbe78c16bc">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Pembelian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="230" width="170" height="20" uuid="257403bb-3c33-4a49-8865-4d29d4aa2fd2">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Beban lain-lain]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="250" width="150" height="15" uuid="0715c7c5-6238-4d69-bed2-ef3658eda874">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[kasbon]]></text>
+			</staticText>
+			<line>
+				<reportElement x="20" y="265" width="270" height="1" uuid="c9fd9d44-bebb-460c-977d-0dc44e40c57e"/>
+			</line>
+			<staticText>
+				<reportElement x="20" y="265" width="150" height="15" uuid="ef7819d3-48d6-479f-9f2b-7396e2ee53a8">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Beban lain-lain]]></text>
+			</staticText>
+			<textField pattern="¤#,##0.##;¤-#,##0.##">
+				<reportElement x="170" y="70" width="110" height="15" uuid="890c6faf-654a-4216-affe-f093bd2fa3ed"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{sales}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.##;¤-#,##0.##">
+				<reportElement x="170" y="85" width="110" height="15" uuid="575304de-66de-46f6-ae59-97d6e568a305"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{salesTurnover}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="85" width="10" height="15" uuid="f64a1807-de73-438e-b325-94182e4795f0"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="250" width="10" height="15" uuid="1adb86bf-3065-45b1-b4b4-8e2ba2f26433"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="195" width="10" height="15" uuid="5ae6d074-0618-48b5-9968-f1dce069c142"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[+]]></text>
+			</staticText>
+			<textField pattern="¤#,##0.##;¤-#,##0.##">
+				<reportElement x="170" y="150" width="110" height="15" uuid="f14fbc0f-407a-4809-a67f-5705c9930105"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{transport}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.##;¤-#,##0.##">
+				<reportElement x="170" y="101" width="110" height="15" uuid="56e7b56d-9f1a-45ae-b2bb-ab38d3885b07"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{sales}-$P{salesTurnover}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.##;¤-#,##0.##">
+				<reportElement x="170" y="165" width="110" height="15" uuid="a8619289-ceed-4bcb-b64b-33fee6926a7c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{production}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.##;¤-#,##0.##">
+				<reportElement x="170" y="180" width="110" height="15" uuid="29ed81fc-d36c-4f17-91b4-58ff8c1bcc30"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{purchase}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.##;¤-#,##0.##">
+				<reportElement x="170" y="195" width="110" height="15" uuid="9f51bdb6-3d2f-4430-80f9-bfaf2193340e"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{payment}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.##;¤-#,##0.##">
+				<reportElement x="170" y="211" width="110" height="14" uuid="316ba38a-3575-4460-b267-979c392dba0e"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{transport}+$P{production}+$P{purchase}+$P{payment}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.##;¤-#,##0.##">
+				<reportElement x="170" y="250" width="110" height="15" uuid="a6a92db5-e902-40b6-bcbe-13f1428733c3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{cashReciept}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.##;¤-#,##0.##">
+				<reportElement x="170" y="265" width="110" height="15" uuid="4972fabe-b826-435e-8272-637b7b558287"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{cashReciept}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="310" y="70" width="145" height="15" uuid="53b60db2-bcf0-4dbc-b80b-b6baca1fa10b">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total Pendapatan]]></text>
+			</staticText>
+			<textField pattern="¤#,##0.##;¤-#,##0.##">
+				<reportElement x="455" y="70" width="100" height="15" uuid="81f966df-e2b2-41aa-884b-1a75136d1598"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{sales}-$P{salesTurnover}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="290" y="50" width="164" height="20" uuid="fada7e83-d4c6-4566-aa9c-694f3dc2a387">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pendapatan Bersih]]></text>
+			</staticText>
+			<textField pattern="¤#,##0.##;¤-#,##0.##">
+				<reportElement x="455" y="85" width="100" height="16" uuid="66cd0574-e02d-4d88-a78c-1e8e6e392f1f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[-($P{transport}+$P{production}+$P{purchase}+$P{payment})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="310" y="86" width="145" height="15" uuid="aad06264-ef27-4d9e-be2b-3e34d518203e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total Beban Operasional]]></text>
+			</staticText>
+			<textField pattern="¤#,##0.##;¤-#,##0.##">
+				<reportElement x="455" y="101" width="100" height="15" uuid="c1e3df33-128a-48d3-bde3-1121f6851fd0"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[-($P{cashReciept})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="310" y="101" width="145" height="15" uuid="7fe4193d-76c2-4da4-91ad-9f267d5727b8">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total Beban lain-lain]]></text>
+			</staticText>
+			<line>
+				<reportElement x="310" y="115" width="255" height="1" uuid="21394185-d151-4868-9542-7c2d683f9809"/>
+			</line>
+			<staticText>
+				<reportElement x="555" y="100" width="10" height="15" uuid="37178b31-2a55-472b-94de-94b4cfeaff11"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="106" width="150" height="15" uuid="43bf4ffe-1bb7-4773-abb9-0b25ff8a5a2e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Pendapatan]]></text>
+			</staticText>
+			<textField pattern="¤#,##0.##;¤-#,##0.##">
+				<reportElement x="455" y="116" width="100" height="14" uuid="6096c129-bf58-4800-94c1-395580902bdc"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($P{sales}-$P{salesTurnover})-($P{transport}+$P{production}+$P{purchase}+$P{payment}+$P{cashReciept})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="530" y="280" width="10" height="17" uuid="004c0f7b-1b87-4f0f-8629-a35c89c40b9b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="280" width="10" height="17" uuid="1bd08076-0e4b-47ca-aaff-6ad31dba2000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="210" width="60" height="14" uuid="28a9e8e4-f1b0-4bac-827e-a901f0d34566"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Lembang, ]]></text>
+			</staticText>
+			<textField pattern="dd MMMM yyyy">
+				<reportElement x="470" y="210" width="75" height="14" uuid="4f12c464-0165-4252-af72-9fc7efca83ef"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="440" y="280" width="90" height="16" uuid="454da39c-118b-4ddf-a0f7-3097a82af647"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Hari Hermawan]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+</jasperReport>

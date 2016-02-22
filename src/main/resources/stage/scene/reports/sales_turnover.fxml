@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+            xmlns="http://javafx.com/javafx/8.0.40" fx:controller="dallastools.actions.reports.SalesTurnoverAction">
+    <left>
+        <AnchorPane prefHeight="158.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+            <children>
+                <TableView fx:id="tableView" focusTraversable="false" layoutX="5.0" layoutY="5.0" prefHeight="200.0"
+                           prefWidth="250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                           AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="columnId" editable="false" maxWidth="75.0" minWidth="75.0" prefWidth="75.0"
+                                     sortable="false" text="%java.model.customer.id">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="KEY" size="14"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="columnCek" editable="false" maxWidth="150.0" minWidth="150.0"
+                                     prefWidth="150.0" sortable="false" text="%javafx.action.do">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="TASKS" size="14"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="columnName" editable="false" maxWidth="1.7976931348623157E308"
+                                     minWidth="200.0" prefWidth="200.0" sortable="false"
+                                     text="%scene.customer.placeholder.name">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="ARCHIVE" size="14"/>
+                            </graphic>
+                        </TableColumn>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+        </AnchorPane>
+    </left>
+    <top>
+        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%scene.financial.statement.for.period"/>
+                <DatePicker fx:id="txtDateBefore" prefHeight="30.0" prefWidth="150.0"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="s/d"/>
+                <DatePicker fx:id="txtDateAfter" layoutX="106.0" layoutY="10.0" prefHeight="30.0" prefWidth="150.0"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%scene.financial.statement.processed.on"/>
+                <Hyperlink fx:id="btnAction" onAction="#doAction" text="Belum diproses!" underline="true">
+                    <font>
+                        <Font name="System Bold" size="16.0"/>
+                    </font>
+                </Hyperlink>
+            </items>
+        </ToolBar>
+    </top>
+    <bottom>
+        <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="200.0"
+                 prefHeight="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab closable="false" text="%scene.financial.statement.daily.income">
+                    <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <LineChart fx:id="lineDateChart" layoutX="-101.0" layoutY="-15.0" prefHeight="385.0"
+                                           prefWidth="399.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                           AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <xAxis>
+                                        <CategoryAxis fx:id="lineDateCategoryAxis" label="%java.model.sales.date"
+                                                      side="BOTTOM"/>
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis fx:id="lineDateNumberAxis" label="Rupiah (Rp.0,-)" side="LEFT"/>
+                                    </yAxis>
+                                </LineChart>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab closable="false" text="%scene.financial.statement.monthly.income">
+                    <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <LineChart fx:id="lineMonthChart" layoutX="-101.0" layoutY="-15.0" prefHeight="385.0"
+                                           prefWidth="399.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                           AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <xAxis>
+                                        <CategoryAxis fx:id="lineMonthCategoryAxis" label="%java.model.sales.date"
+                                                      side="BOTTOM"/>
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis fx:id="lineMonthNumberAxis" label="Rupian (Rp.0,-)" side="LEFT"/>
+                                    </yAxis>
+                                </LineChart>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </bottom>
+    <center>
+        <AnchorPane BorderPane.alignment="CENTER">
+            <children>
+                <BarChart fx:id="barChart" layoutX="-87.0" layoutY="-138.0" AnchorPane.bottomAnchor="0.0"
+                          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <xAxis>
+                        <CategoryAxis fx:id="barCategoryAxis" label="%scene.home.menu.master.item" side="BOTTOM"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis fx:id="barNumberAxis" label="%java.model.item.qty" side="LEFT"/>
+                    </yAxis>
+                </BarChart>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

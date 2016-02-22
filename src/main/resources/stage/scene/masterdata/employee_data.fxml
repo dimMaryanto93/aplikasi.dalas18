@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+            xmlns="http://javafx.com/javafx/8.0.40" fx:controller="dallastools.actions.masterdata.EmployeeDataAction">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="5.0" BorderPane.alignment="CENTER">
+            <children>
+                <FontAwesomeIconView glyphName="MALE" size="28"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%scene.home.menu.master.employee.an-employee"
+                      underline="true">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                </Text>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+        </HBox>
+    </top>
+    <center>
+        <ScrollPane vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+            <content>
+                <GridPane hgap="10.0" vgap="10.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="120.0" prefWidth="120.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="120.0" prefWidth="120.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+                    </padding>
+                    <children>
+                        <Text layoutX="25.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.address.na" GridPane.columnSpan="2147483647" GridPane.rowIndex="9"/>
+                        <Text layoutX="25.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.address.district" GridPane.rowIndex="4"/>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%java.model.employee.name"/>
+                        <Text layoutX="25.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.employee.jobid" GridPane.rowIndex="1"/>
+                        <Text layoutX="25.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.address.street.address" GridPane.rowIndex="5"/>
+                        <Text layoutX="25.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.address.nl" GridPane.columnSpan="2" GridPane.rowIndex="8"/>
+                        <Text layoutX="25.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.address.city" GridPane.rowIndex="3"/>
+                        <Text layoutX="25.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="%java.model.address.pin.code" GridPane.rowIndex="10"/>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                                    GridPane.columnSpan="2147483647">
+                            <children>
+                                <TextField fx:id="txtName" layoutX="-26.0" layoutY="1.0" prefHeight="30.0"
+                                           prefWidth="145.0" promptText="%scene.employee.placeholder.name"
+                                           AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                           AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                                    GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                            <children>
+                                <ChoiceBox fx:id="txtJob" layoutX="23.0" layoutY="3.0" prefHeight="30.0"
+                                           prefWidth="210.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                           AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                                    GridPane.columnSpan="2147483647" GridPane.rowIndex="3">
+                            <children>
+                                <TextField fx:id="txtCity" layoutX="20.0" layoutY="2.0" prefHeight="30.0"
+                                           prefWidth="210.0" promptText="%java.model.address.city"
+                                           AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                           AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="155.0" layoutY="165.0" prefHeight="200.0" prefWidth="200.0"
+                                    GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="4">
+                            <children>
+                                <TextField fx:id="txtDistrict" layoutX="20.0" layoutY="2.0" prefHeight="30.0"
+                                           prefWidth="210.0" promptText="%java.model.address.district"
+                                           AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                           AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                                    GridPane.columnSpan="2147483647" GridPane.rowIndex="5" GridPane.rowSpan="3">
+                            <children>
+                                <TextArea fx:id="txtStreetAddress" layoutX="92.0" layoutY="-45.0" prefHeight="155.0"
+                                          prefWidth="320.0" promptText="%java.model.address.street.address"
+                                          AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="155.0" layoutY="105.0" prefHeight="200.0" prefWidth="200.0"
+                                    GridPane.columnIndex="3" GridPane.rowIndex="8">
+                            <children>
+                                <Spinner fx:id="txtRt" layoutX="-42.0" layoutY="3.0" prefHeight="30.0" prefWidth="129.0"
+                                         AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                         AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="155.0" layoutY="365.0" prefHeight="200.0" prefWidth="200.0"
+                                    GridPane.columnIndex="3" GridPane.rowIndex="9">
+                            <children>
+                                <Spinner fx:id="txtRw" layoutX="-42.0" layoutY="3.0" prefHeight="30.0" prefWidth="129.0"
+                                         AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                         AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="265.0" layoutY="365.0" prefHeight="200.0" prefWidth="200.0"
+                                    GridPane.columnIndex="3" GridPane.rowIndex="10">
+                            <children>
+                                <Spinner fx:id="txtPinCode" layoutX="-42.0" layoutY="3.0" prefHeight="30.0"
+                                         prefWidth="129.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                         AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                                    GridPane.rowIndex="11">
+                            <children>
+                                <Button fx:id="btnSave" defaultButton="true" disable="true" layoutX="19.0" layoutY="2.0"
+                                        mnemonicParsing="false" onAction="#doSave" prefHeight="30.0" prefWidth="100.0"
+                                        text="%javafx.action.save" AnchorPane.bottomAnchor="0.0"
+                                        AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                        AnchorPane.topAnchor="0.0">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="SAVE" size="18" text=""/>
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="155.0" layoutY="445.0" prefHeight="200.0" prefWidth="200.0"
+                                    GridPane.columnIndex="2" GridPane.rowIndex="11">
+                            <children>
+                                <Button cancelButton="true" layoutX="19.0" layoutY="2.0" mnemonicParsing="false"
+                                        onAction="#doClose" prefHeight="30.0" prefWidth="100.0"
+                                        text="%javafx.action.cancel" AnchorPane.bottomAnchor="0.0"
+                                        AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                        AnchorPane.topAnchor="0.0">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="EJECT" size="18"/>
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </GridPane>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>
