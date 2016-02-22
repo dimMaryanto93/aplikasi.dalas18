@@ -4,11 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.unikom.dimmaryanto</groupId>
-    <artifactId>dallas_tools</artifactId>
-    <version>1.4.3</version>
+    <groupId>com.gmail.dimmaryanto</groupId>
+    <artifactId>dalas18-cash-management</artifactId>
+    <version>1.0</version>
+    <name>Sistem Informasi Pemasukan dan Pengeluaran Kas pada UKM Dalas18</name>
     <packaging>jar</packaging>
-    <url>https://www.github.com/dimmaryanto/dallastools</url>
+    <url>https://www.github.com/dimmaryanto/dalas18-cash-management</url>
 
     <dependencies>
         <!--Spring Framework Dependency-->
