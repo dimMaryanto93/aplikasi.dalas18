@@ -1,21 +1,20 @@
-## DallasTools (Sistem Informasi Pemasukan dan Pengeluaran Kas)
+# dalas18-cash-management (Development-Mode)
 
-### Instalasi Software
-* Download [*jre-1.8*] (http://www.java.com/en/download/ "Download Java") dan install jre 1.8-ux.x
-* Download [*PostgreSQL 9.x*] (http://www.enterprisedb.com/products-services-training/pgdownload "Download PostgreSQL Database Server") dan install database PostgreSQL
-* Download [*dallas_tools-x.x-jar-with-dependencies.jar*] (https://github.com/dimMaryanto/dallastools/releases "Download Aplikasi DallasToolsApp")
-* Jalankan aplikasi, selamat mencoba :smile:
+Project ini masih dalam masa pengembangan lebih lanjut setelah versi karya ilmiah / skripsi untuk mengesuaikan dengan fungsi yang sebenarnya dan berdasarkan permintaan pengguna.
 
-### System Requirement
-* Minimum Spesification
-    * Prosesor : Dual Core, 1.7Ghz
-    * RAM : 256Mb (tidak termasuk sistem operasi)
-    * Hardisk : 80Gb
-    * GPU : Intel GMA atau minimum resolusi (1200 x 720)
-    * OS : Windows 7 atau Linux (Ubuntu, Fedora, dll)
-* Recomendasi Spesifikasi
-    * Prosessor : Core-i3 atau lebih tinggi
-    * RAM : 4Gb atau lebih tinggi
-    * Hardisk : 500Gb atau lebih tinggi
-    * GPU : Intel GMA atau lebih tinggi
-    * OS : Linux Ubuntu Desktop
+## Sistem Informasi Pemasukan dan Pengeluaran Kas
+
+Sistem Informasi ini akan berfokus pada pencatatan transaksi yang berkaitan dengan pemasukan dan pengeluaran kas pada UKM Es Dalas. berikut ini adalah batasan sistem yang terdiri dari :
+
+* Penjualan (es krim), input jumlah dan harganya sesuia dengan buku catatan harian penjualan.
+* Pembelian bahan baku (Gula dan hanco)
+* Biaya oprasional
+
+## Teknologi
+
+Teknologi yang digunakan terdiri dari:
+
+* JavaFX 2
+* Hibernate ORM
+* Spring Framework (Dependency Injection)
+* Maven Project
