@@ -55,7 +55,9 @@ git clone https://github.com/dimMaryanto/dalas18-cash-management.git
 
 * export ke jar
 
-```mvn clean compile assembly:single``` atau ```mvn clean compile assembly\:single```
+```
+mvn clean compile assembly:single
+```
 
 * execute jar file
 
