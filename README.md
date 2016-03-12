@@ -11,7 +11,7 @@ berikut ini adalah batasan sistem yang terdiri dari :
  
 ## Demo (unstable version)
 
-[![play in youtube](http://img.youtube.com/vi/w2QCogdllio/hqdefault.jpg)](https://www.youtube.com/watch?v=w2QCogdllio)
+[![play in youtube](http://img.youtube.com/vi/w2QCogdllio/default.jpg)](https://www.youtube.com/watch?v=w2QCogdllio)
 
 ## Download Draft SKRIPSI.pdf
 
