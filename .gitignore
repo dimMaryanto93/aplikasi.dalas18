@@ -113,7 +113,6 @@ crashlytics-build.properties
 #Other Settings
 hibernate.cfg.xml
 /schema/javadoc
-export
 
 # microsoft office document temp
 ~*.docx
