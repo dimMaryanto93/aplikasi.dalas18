@@ -121,5 +121,6 @@ hibernate.cfg.xml
 # visual paradigm project temp
 *.vpp.*
 *.vpp~*
+*.vux*
 
 *.jasper
